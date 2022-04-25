@@ -31,7 +31,44 @@
     .medecins .card {border: none;}
     .dr-infos {text-align: center;}
     footer{}
+
+    .popup-hide { position: fixed;
+    filter: drop-shadow(0 0 500px rgb(0, 0, 0));
+    padding: 10px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 150ms ease-in-out;
+    border: solid 1px #ededed;
+    border-radius: 5px;
+    z-index: 10;
+    background-color: white;
+    width: 600px;
+    max-width: 80%;
+    /*display: none;*/
+    overflow-y: auto;
+    overflow-x: hidden;
+    }
+    .reservation-form input {border-radius: 0px;}
+    .reservation-form select {border-radius: 0px;}
+    .reservation-form button {border-radius: 0px;}
 </style>
+<script>
+   //script popup products
+   function showpopup(params) {
+        var popup=document.getElementById(params);
+        
+        popup.style.transform = 'translate(-50%, -50%) scale(1)';
+
+            
+      }
+      function hidepopup(params) {
+        var popup=document.getElementById(params);       
+        
+        popup.style.transform = 'translate(-50%, -50%) scale(0)';
+        
+      }
+</script>
 <body>
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
@@ -68,7 +105,7 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
               <p>dit dolorum. Incidunt, repellendus dolores?</p>
               <br>
-              <button type="button" class="btn btn-outline-primary rounded-0 p-3">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
+              <button onclick="showpopup('popup')" type="button" class="btn btn-outline-primary rounded-0 p-3">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
             </div>
             <div class="col-sm-7">
               <img src="3.png" class="img-fluid" alt="">
@@ -77,6 +114,68 @@
            
         </div> 
         <br><br>
+        <div class="popup-hide" id="popup">
+          <div class="d-block">
+            <h5 class="d-inline">Prendre un rendez-vous</h5>
+            <button onclick="hidepopup('popup')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
+          </div>
+                  
+          <hr>
+          <form action="" class="reservation-form">
+            <select class="form-select mb-1" aria-label="Default select example">
+              <option selected>Select Doctor</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <div class="row mb-1">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-sm" id="email" placeholder="Enter email" name="email">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-sm" id="phone" placeholder="Enter phone" name="phone">
+                  <label for="phone">Phone</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-1">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-sm" id="name" placeholder="Enter name" name="name">
+                  <label for="name">Name</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-sm" id="age" placeholder="Enter age" name="age">
+                  <label for="age">Age</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-1">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="date" class="form-control form-control-sm" id="date" placeholder="Enter date" name="date">
+                  <label for="date">Date</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating">
+                  <input type="time" class="form-control form-control-sm" id="time" placeholder="Enter time" name="time">
+                  <label for="time">Horaire</label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid">
+              <input type="submit" value="Confirmer" class="btn btn-block btn-primary p-2">
+            </div>
+            
+          </form>
+        </div>
         <div class="services">
             <br>
             <h2 class="centring">Nos services</h2>
@@ -223,7 +322,7 @@
     </div>
     <hr>
     <div class="centring">
-      <h5>© 2021 Copyright: USTHB-ESE-STUDENTS</h5>
+      <h5>© 2022 Copyright: USTHB-ESE-STUDENTS</h5>
     </div>
   </div>
   
