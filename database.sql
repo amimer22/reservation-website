@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `reservation` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `specialcode` varchar(250) NOT NULL,
   `departement` varchar(250) NOT NULL,
   `medecin` varchar(250) NOT NULL,
@@ -9,7 +9,6 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `age` int NOT NULL,
   `date` date NOT NULL,
   `horaire` time NOT NULL,
-  `comments` varchar(250) NOT NULL,
+  `comments` varchar(250) NOT NULL
   
-  PRIMARY KEY (`id`),
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+)
