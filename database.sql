@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `specialcode` varchar(250) NOT NULL,
   `departement` varchar(250) NOT NULL,
-  `doctor` varchar(250) NOT NULL,
+  `medecin` varchar(250) NOT NULL,
   `email` varchar(250) NOT NULL,
   `phone` varchar(250) NOT NULL, 
   `name` varchar(250) NOT NULL,
