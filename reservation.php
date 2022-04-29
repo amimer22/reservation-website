@@ -14,8 +14,8 @@ $comment=$_REQUEST['comment'];
 
 
 
-$query=mysqli_query($db_connect,"INSERT INTO reservation (specialcode,departements,medecins,email,phone,name,age,date,time,comment) VALUES ('$specialcode','$departements','$medecins','$email','$phone','$name','$age','$date','$time','$comment')") or die(mysqli_error($db_connect));
+$query=mysqli_query($db_connect,"INSERT INTO reservation (specialcode,departement,medecin,email,phone,name,age,date,horaire,comments) VALUES ('$specialcode','$departements','$medecins','$email','$phone','$name','$age','$date','$time','$comment')") or die(mysqli_error($db_connect));
 
 mysqli_close($db_connect);
-//header("location:hackathon.php?note=success");
+header("location:homepage.php?note=success");
 
