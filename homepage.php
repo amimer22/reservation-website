@@ -69,6 +69,9 @@
         
       }
 </script>
+<?php
+include("main.php");
+?>
 <body>
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
@@ -121,7 +124,7 @@
           </div>
                   
           <hr>
-          <form action="" class="reservation-form">
+          <form action="reservation.php" class="reservation-form" method="post">
             <div class="input-group mb-1">
               <span class="input-group-text rounded-0">Code</span>
               <input type="text" class="form-control" value="variable-code-for-each-user" name="specialcode" readonly>
