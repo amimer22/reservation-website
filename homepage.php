@@ -127,7 +127,7 @@ include("main.php");
           <form action="reservation.php" class="reservation-form" method="post">
             <div class="input-group mb-1">
               <span class="input-group-text rounded-0">Code</span>
-              <input type="text" class="form-control" value="variable-code-for-each-user" name="specialcode" readonly>
+              <input type="text" class="form-control" value='<?php include("specialcode.php") ?>' name="specialcode" readonly>
             </div>
             <select class="form-select mb-1" aria-label="Default select example" id="departements" name="departements">
               <option selected>Select Departement</option>
