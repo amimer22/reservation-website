@@ -3,7 +3,7 @@
 
 function generateRandomString($length = 3) {
     
-    $characters = '01';
+    $characters = '0123456789';
     $charactersLength = strlen($characters);
     $randomString = 'E-MED-';
     for ($i = 0; $i < $length; $i++) {
