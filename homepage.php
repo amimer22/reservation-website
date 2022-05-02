@@ -52,6 +52,7 @@
     .reservation-form input {border-radius: 0px;}
     .reservation-form select {border-radius: 0px;}
     .reservation-form button {border-radius: 0px;}
+    
 </style>
 <script>
    //script popup products
@@ -68,6 +69,14 @@
         popup.style.transform = 'translate(-50%, -50%) scale(0)';
         
       }
+  //copier
+  function copy() {
+    var CopySpan = document.getElementById("CopySpan");
+    var text = document.getElementById("specialcode").value;
+    var textCopied = navigator.clipboard.writeText(text);
+    
+    CopySpan.innerHTML ="Copied!";
+  }
 </script>
 <?php
 include("main.php");
@@ -126,8 +135,11 @@ include("main.php");
           <hr>
           <form action="reservation.php" class="reservation-form" method="post">
             <div class="input-group mb-1">
-              <span class="input-group-text rounded-0">Code</span>
-              <input type="text" class="form-control" value='<?php include("specialcode.php") ?>' name="specialcode" readonly>
+              <span class="input-group-text bg-white rounded-0">Code</span>
+              <span class="input-group-text bg-warning rounded-0"><i class="fas fa-exclamation-triangle"></i> -Code est necessaire en cas d'annulation</span>
+              <input type="text" class="form-control" value='<?php include("specialcode.php") ?>' id='specialcode' name="specialcode" readonly>
+              
+              <span class="input-group-text bg-white rounded-0" id="CopySpan" onclick='copy()'>Copier</span>
             </div>
             <select class="form-select mb-1" aria-label="Default select example" id="departements" name="departements">
               <option selected>Select Departement</option>
