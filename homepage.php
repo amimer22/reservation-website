@@ -49,6 +49,23 @@
     overflow-y: auto;
     overflow-x: hidden;
     }
+    .popup-hide1 { position: fixed;
+    filter: drop-shadow(0 0 500px rgb(0, 0, 0));
+    padding: 10px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 150ms ease-in-out;
+    border: solid 1px #ededed;
+    border-radius: 5px;
+    z-index: 10;
+    background-color: white;
+    width: 800px;
+    max-width: 80%;
+    /*display: none;*/
+    overflow-y: auto;
+    overflow-x: hidden;
+    }
     
     .reservation-form input {border-radius: 0px;}
     .reservation-form select {border-radius: 0px;}
@@ -57,19 +74,19 @@
 </style>
 <script>
    //script popup products
-   function showpopup(params) {
-        var popup=document.getElementById(params);
-        
-        popup.style.transform = 'translate(-50%, -50%) scale(1)';
+  function showpopup(params) {
+      var popup=document.getElementById(params);
+      
+      popup.style.transform = 'translate(-50%, -50%) scale(1)';
 
-            
-      }
-      function hidepopup(params) {
-        var popup=document.getElementById(params);       
-        
-        popup.style.transform = 'translate(-50%, -50%) scale(0)';
-        
-      }
+          
+    }
+  function hidepopup(params) {
+    var popup=document.getElementById(params);       
+    
+    popup.style.transform = 'translate(-50%, -50%) scale(0)';
+    
+  }
   //copier
   function copy() {
     var CopySpan = document.getElementById("CopySpan");
@@ -79,8 +96,18 @@
     CopySpan.innerHTML ="Copied!";
   }
   //after reservation 
-  function afterReservation() {
-    window.alert("message");
+  function afterReservation(params) {
+    var popup1=document.getElementById(params);
+        
+        popup1.style.transform = 'translate(-50%, -50%) scale(1)';
+
+        
+  }
+  function afterReservationClose(params) {
+    var popup1=document.getElementById(params);       
+        
+        popup1.style.transform = 'translate(-50%, -50%) scale(0)';
+        
   }
 </script>
 <?php
@@ -206,20 +233,20 @@ include("main.php");
               <label for="comment">Comments</label>
             </div> 
             <div class="d-grid">
-              <input type="submit" onclick="showpopup('popup1')" value="Confirmer" class="btn btn-block btn-primary p-2">
+              <input type="submit"  value="Confirmer" class="btn btn-block btn-primary p-2">
             </div>
             
           </form>
         </div>
         <!-- after reservation popup -->
-        <div class="popup-hide" id='popup1'>
+        <!--div class="popup-hide1" id='popup1'>
           <div class="message">
             <h5>Dont forget code</h5>
           </div>
           <div class="options">
-            <button onclick="hidepopup('popup1')">ok</button>
+            <button onclick="afterReservationClose('popup1')">ok</button>
           </div>
-        </div>
+        </div-->
         <div class="services">
             <br>
             <h2 class="centring">Nos services</h2>
