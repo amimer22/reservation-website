@@ -136,10 +136,11 @@ include("main.php");
           <form action="reservation.php" class="reservation-form" method="post">
             <div class="input-group mb-1">
               <span class="input-group-text bg-white rounded-0">Code</span>
-              <span class="input-group-text bg-warning rounded-0"><i class="fas fa-exclamation-triangle"></i> -Code est necessaire en cas d'annulation</span>
+              
               <input type="text" class="form-control" value='<?php include("specialcode.php") ?>' id='specialcode' name="specialcode" readonly>
               
               <span class="input-group-text bg-white rounded-0" id="CopySpan" onclick='copy()'>Copier</span>
+              <span class="input-group-text bg-warning rounded-0"><small><i class="fas fa-exclamation-triangle"></i> Code est necessaire en cas d'annulation</small></span>
             </div>
             <select class="form-select mb-1" aria-label="Default select example" id="departements" name="departements">
               <option selected>Select Departement</option>
