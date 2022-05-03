@@ -49,6 +49,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     }
+    
     .reservation-form input {border-radius: 0px;}
     .reservation-form select {border-radius: 0px;}
     .reservation-form button {border-radius: 0px;}
@@ -76,6 +77,10 @@
     var textCopied = navigator.clipboard.writeText(text);
     
     CopySpan.innerHTML ="Copied!";
+  }
+  //after reservation 
+  function afterReservation() {
+    window.alert("message");
   }
 </script>
 <?php
@@ -201,10 +206,19 @@ include("main.php");
               <label for="comment">Comments</label>
             </div> 
             <div class="d-grid">
-              <input type="submit" value="Confirmer" class="btn btn-block btn-primary p-2">
+              <input type="submit" onclick="showpopup('popup1')" value="Confirmer" class="btn btn-block btn-primary p-2">
             </div>
             
           </form>
+        </div>
+        <!-- after reservation popup -->
+        <div class="popup-hide" id='popup1'>
+          <div class="message">
+            <h5>Dont forget code</h5>
+          </div>
+          <div class="options">
+            <button onclick="hidepopup('popup1')">ok</button>
+          </div>
         </div>
         <div class="services">
             <br>
