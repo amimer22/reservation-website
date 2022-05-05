@@ -66,7 +66,8 @@
     overflow-y: auto;
     overflow-x: hidden;
     }
-    
+    .reservation-form {
+    }
     .reservation-form input {border-radius: 0px;}
     .reservation-form select {border-radius: 0px;}
     .reservation-form button {border-radius: 0px;}
@@ -124,6 +125,8 @@
   //
   function spinneron() {
   document.getElementById("spinner").style.display = "block";
+  document.getElementById("reservation-form").style.filter ='blur(8px)' ;
+  document.getElementById("upper-popup").style.filter ='blur(8px)' ;
 }
 
   function spinneroff() {
@@ -179,9 +182,10 @@ include("main.php");
         </div> 
         <br><br>
         <div class="popup-hide" id="popup">
-          <div class="d-block">
+          <div class="d-block" id="upper-popup">
             <h5 class="d-inline">Prendre un rendez-vous</h5>
             <button onclick="hidepopup('popup')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
+            <hr>
           </div>
           <div class="spinner pt-4" id="spinner">
             <div class="d-flex justify-content-center">
@@ -193,8 +197,8 @@ include("main.php");
             </div> 
           </div>
                 
-          <hr>
-          <form action="reservation.php" class="reservation-form" method="post">
+          
+          <form action="reservation.php" id="reservation-form" class="reservation-form" method="post">
             <div class="input-group mb-1">
               <span class="input-group-text bg-white rounded-0">Code</span>
               
