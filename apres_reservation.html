@@ -15,17 +15,19 @@
 </head>
 <style>
     .message {text-align: center;}
+    
 </style>
 <body>
+    <div class="message p-4 bg-primary">
+            <h4 class="text-white">Reservation eregistrée <i class="far fa-calendar-check"></i></h4>
+    </div>
     <div class="container">
-        <div class="message p-5 bg-primary">
-            <h4>Reservation eregistrée</h4>
-        </div>
+        
         <br>
         <div class="row">
             <div class="col-sm-6">
                 <div class="ticket">
-                    <h5 class="brandname">E-MED</h5>
+                    <h5 class="brandname"> E-MED</h5>
                     <div class="infos">
                         <p>Code : </p>
                         <p>Nom : </p>
@@ -35,7 +37,7 @@
                         <p>Date :</p>
                         <p>Heure :</p>
                     </div>
-                    <br>
+                    <hr>
                     <div class="contact">
                         <p>Pour nous contacter : </p>
                         <p>Email :</p>
@@ -45,8 +47,18 @@
                 </div>
             </div>
             <div class="col-sm-6">
+                <div class="description">
+                    <p>Choisissez une des methodes suivantes pour enregister votre tickets</p>
+                </div>
                 <div class="options">
-                    <button class="btn btn-primary">Telecharger comme PDF</button>
+                    <div class="d-grid">
+                        <button class="btn rounded-0 btn-block btn-primary">Telecharger comme PDF</button>
+                        <hr>
+                        <button class="btn rounded-0 btn-block btn-primary">Copier dans press-papier</button>
+                        
+                
+                    </div>
+                    
                 </div>
             </div>
         </div>
