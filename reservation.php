@@ -1,5 +1,5 @@
 <?php
-
+sleep(1);//delay
 include("main.php");
 $specialcode=$_REQUEST['specialcode'];
 $departements=$_REQUEST['departements'];
