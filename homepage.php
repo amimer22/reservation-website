@@ -40,7 +40,7 @@
     transform: translate(-50%, -50%) scale(0);
     transition: 150ms ease-in-out;
     border: solid 1px #ededed;
-    border-radius: 5px;
+    border-radius: 0px;
     z-index: 10;
     background-color: white;
     width: 800px;
@@ -57,7 +57,7 @@
     transform: translate(-50%, -50%) scale(0);
     transition: 150ms ease-in-out;
     border: solid 1px #ededed;
-    border-radius: 5px;
+    border-radius: 0px;
     z-index: 10;
     background-color: white;
     width: 800px;
