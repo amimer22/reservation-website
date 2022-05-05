@@ -70,7 +70,19 @@
     .reservation-form input {border-radius: 0px;}
     .reservation-form select {border-radius: 0px;}
     .reservation-form button {border-radius: 0px;}
-    
+    .spinner {
+      position: fixed; /* Sit on top of the page content */
+      display: none; /* Hidden by default */
+      width: 20%; /* Full width (cover the whole page) */
+      height: 20%; /* Full height (cover the whole page) */
+      top:200px;
+      left: 300px;
+      right: 0;
+      bottom: 0;
+     
+      z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      cursor: pointer; /* Add a pointer on hover */
+    }
 </style>
 <script>
    //script popup products
@@ -108,6 +120,14 @@
         
         popup1.style.transform = 'translate(-50%, -50%) scale(0)';
         
+  }
+  //
+  function spinneron() {
+  document.getElementById("spinner").style.display = "block";
+}
+
+  function spinneroff() {
+    document.getElementById("overlay").style.display = "none";
   }
 </script>
 <?php
@@ -163,7 +183,16 @@ include("main.php");
             <h5 class="d-inline">Prendre un rendez-vous</h5>
             <button onclick="hidepopup('popup')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
           </div>
-                  
+          <div class="spinner pt-4" id="spinner">
+            <div class="d-flex justify-content-center">
+              
+              <div class="spinner-border" role="status">
+                
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div> 
+          </div>
+                
           <hr>
           <form action="reservation.php" class="reservation-form" method="post">
             <div class="input-group mb-1">
@@ -233,7 +262,8 @@ include("main.php");
               <label for="comment">Comments</label>
             </div> 
             <div class="d-grid">
-              <input type="submit"  value="Confirmer" class="btn btn-block btn-primary p-2">
+              <input type="submit" onclick="spinneron('')" value="Confirmer" class="btn btn-block btn-primary p-2">
+              
             </div>
             
           </form>
