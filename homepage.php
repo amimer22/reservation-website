@@ -172,10 +172,11 @@ include("main.php");
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
               <p>dit dolorum. Incidunt, repellendus dolores?</p>
               <br>
-              <button onclick="showpopup('popup')" type="button" class="btn btn-outline-primary rounded-0 p-3">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
+              <button onclick="showpopup('popup')" type="button" class="btn btn-outline-primary rounded-0 p-3 m-1">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
+              <button onclick="showpopup('popup2')" type="button" class="btn btn-outline-warning rounded-0 p-3 m-1">Annulation ou modification du rendez-vous  <i class="fas fa-calendar-times"></i></button> 
             </div>
             <div class="col-sm-7">
-              <img src="3.png" class="img-fluid" alt="">
+              <img src="3.png" class="img-fluid d-none d-sm-block" alt="">
             </div>
           </div>
            
