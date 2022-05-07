@@ -178,8 +178,7 @@ include("main.php");
             <div class="col-sm-7">
               <img src="3.png" class="img-fluid d-none d-sm-block" alt="">
             </div>
-          </div>
-           
+          </div>          
         </div> 
         <br><br>
         <div class="popup-hide" id="popup">
@@ -273,6 +272,15 @@ include("main.php");
             
           </form>
         </div>
+        <div class="popup-hide" id="popup2">
+          <div class="d-block" id="upper-popup2">
+            <h5 class="d-inline">Annulation ou modification du rendez-vous </h5>
+            
+            <button onclick="hidepopup('popup2')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
+            <hr>
+          </div>
+        </div>
+        
         <!-- after reservation popup -->
         <!--div class="popup-hide1" id='popup1'>
           <div class="message">
