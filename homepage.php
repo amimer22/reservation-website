@@ -173,7 +173,7 @@ include("main.php");
               <p>dit dolorum. Incidunt, repellendus dolores?</p>
               <br>
               <div class="d-grid">
-                <button onclick="showpopup('popup')" type="button" class="btn btn-block btn-outline-primary rounded-0 p-3 m-1">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
+                <button onclick="showpopup('popup')" type="button" class="btn btn-block btn-primary rounded-0 p-3 m-1">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
                 <button onclick="showpopup('popup2')" type="button" class="btn btn-block btn-outline-warning rounded-0 p-3 m-1">Modifier un rendez-vous  <img src="https://img.icons8.com/material-rounded/20/000000/edit-calendar.png"/></button> 
                 <button onclick="showpopup('popup3')" type="button" class="btn btn-block btn-outline-danger rounded-0 p-3 m-1">Annuler un rendez-vous  <i class="fas fa-calendar-times"></i></button> 
               </div>            
@@ -282,10 +282,17 @@ include("main.php");
             <button onclick="hidepopup('popup2')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
             <hr>
           </div>
+          <form action="">
+            <div class="input-group mb-1">
+              <span class="input-group-text bg-white rounded-0" id="emedSpan">E-MED-</span>
+              <input type="text" class="form-control" placeholder="Enter Code" name="entercode">             
+            </div>
+            
+          </form>
         </div>
         <div class="popup-hide" id="popup3">
           <div class="d-block" id="upper-popup3">
-            <h5 class="d-inline">Anuller un rendez-vous </h5>
+            <h5 class="d-inline">Annuler un rendez-vous </h5>
             
             <button onclick="hidepopup('popup3')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
             <hr>
