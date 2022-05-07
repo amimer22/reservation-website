@@ -172,8 +172,11 @@ include("main.php");
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
               <p>dit dolorum. Incidunt, repellendus dolores?</p>
               <br>
-              <button onclick="showpopup('popup')" type="button" class="btn btn-outline-primary rounded-0 p-3 m-1">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
-              <button onclick="showpopup('popup2')" type="button" class="btn btn-outline-warning rounded-0 p-3 m-1">Annulation ou modification du rendez-vous  <i class="fas fa-calendar-times"></i></button> 
+              <div class="d-grid">
+                <button onclick="showpopup('popup')" type="button" class="btn btn-block btn-outline-primary rounded-0 p-3 m-1">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
+                <button onclick="showpopup('popup2')" type="button" class="btn btn-block btn-outline-warning rounded-0 p-3 m-1">Modifier un rendez-vous  <img src="https://img.icons8.com/material-rounded/20/000000/edit-calendar.png"/></button> 
+                <button onclick="showpopup('popup3')" type="button" class="btn btn-block btn-outline-danger rounded-0 p-3 m-1">Annuler un rendez-vous  <i class="fas fa-calendar-times"></i></button> 
+              </div>            
             </div>
             <div class="col-sm-7">
               <img src="3.png" class="img-fluid d-none d-sm-block" alt="">
@@ -274,9 +277,17 @@ include("main.php");
         </div>
         <div class="popup-hide" id="popup2">
           <div class="d-block" id="upper-popup2">
-            <h5 class="d-inline">Annulation ou modification du rendez-vous </h5>
+            <h5 class="d-inline">modifier un rendez-vous </h5>
             
             <button onclick="hidepopup('popup2')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
+            <hr>
+          </div>
+        </div>
+        <div class="popup-hide" id="popup3">
+          <div class="d-block" id="upper-popup3">
+            <h5 class="d-inline">Anuller un rendez-vous </h5>
+            
+            <button onclick="hidepopup('popup3')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
             <hr>
           </div>
         </div>
