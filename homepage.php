@@ -174,7 +174,7 @@ include("main.php");
               <br>
               <div class="d-grid">
                 <button onclick="showpopup('popup')" type="button" class="btn btn-block btn-primary rounded-0 p-3 m-1">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
-                <button onclick="showpopup('popup2')" type="button" class="btn btn-block btn-outline-warning rounded-0 p-3 m-1">Modifier un rendez-vous  <img src="https://img.icons8.com/material-rounded/20/000000/edit-calendar.png"/></button> 
+                <button onclick="showpopup('popup2')" type="button" class="btn btn-block btn-outline-warning rounded-0 p-3 m-1" disabled>Modifier un rendez-vous  <img src="https://img.icons8.com/material-rounded/20/000000/edit-calendar.png"/ ></button> 
                 <button onclick="showpopup('popup3')" type="button" class="btn btn-block btn-outline-danger rounded-0 p-3 m-1">Annuler un rendez-vous  <i class="fas fa-calendar-times"></i></button> 
               </div>            
             </div>
