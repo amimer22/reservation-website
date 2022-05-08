@@ -321,6 +321,33 @@ include("main.php");
             <button onclick="hidepopup('popup3')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
             <hr>
           </div>
+          <form action="">
+            <div class="input-group mb-1">
+              <span class="input-group-text bg-white rounded-0" id="emedSpan">E-MED-</span>
+              <input type="text" class="form-control" placeholder="Enter Code" name="">             
+            </div>
+            <div class="row mb-1">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-sm" id="" placeholder="Enter name" name="">
+                  <label for="name">Nom</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-sm" id="" placeholder="Enter " name="">
+                  <label for="name">Prenom</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-floating mb-1">
+                  <input type="email" class="form-control form-control-sm" id="" placeholder="Enter name" name="">
+                  <label for="name">Email</label>
+            </div>
+            <div class="d-grid">
+                <input class="btn btn-block btn-primary " type="text" value="Annuler">
+            </div>
+          </form>
         </div>
         
         <!-- after reservation popup -->
