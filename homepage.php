@@ -275,6 +275,8 @@ include("main.php");
             
           </form>
         </div>
+        <!-- holding on modify feature for later -->
+        <!--
         <div class="popup-hide" id="popup2">
           <div class="d-block" id="upper-popup2">
             <h5 class="d-inline">modifier un rendez-vous </h5>
@@ -313,7 +315,7 @@ include("main.php");
                 <input class="btn btn-block btn-primary " type="text" value="Modifier">
             </div>
           </form>
-        </div>
+        </div> -->
         <div class="popup-hide" id="popup3">
           <div class="d-block" id="upper-popup3">
             <h5 class="d-inline">Annuler un rendez-vous </h5>
