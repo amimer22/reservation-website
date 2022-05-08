@@ -282,12 +282,36 @@ include("main.php");
             <button onclick="hidepopup('popup2')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
             <hr>
           </div>
+
+          <div class="description">
+            <p>Complete the form to access modfication</p>
+          </div>
           <form action="">
             <div class="input-group mb-1">
               <span class="input-group-text bg-white rounded-0" id="emedSpan">E-MED-</span>
               <input type="text" class="form-control" placeholder="Enter Code" name="entercode">             
             </div>
-            
+            <div class="row mb-1">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-sm" id="name" placeholder="Enter name" name="name-modify">
+                  <label for="name">Nom</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-sm" id="name" placeholder="Enter " name="name-modify">
+                  <label for="name">Prenom</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-floating mb-1">
+                  <input type="email" class="form-control form-control-sm" id="name" placeholder="Enter name" name="name-modify">
+                  <label for="name">Email</label>
+            </div>
+            <div class="d-grid">
+                <input class="btn btn-block btn-primary " type="text" value="Modifier">
+            </div>
           </form>
         </div>
         <div class="popup-hide" id="popup3">
