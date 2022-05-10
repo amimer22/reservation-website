@@ -7,7 +7,9 @@ $emailDelete=$_REQUEST['email'];
 //check if exists
 $sql = "DELETE FROM reservation WHERE specialcode='$specialCodeDelete' AND name='$nomDelete' AND email ='$emailDelete' ";
 //delete if exists
+$delete=mysqli_query($db_connect,$sql) or die ("La requête a échoué");
 
-
+mysqli_close($db_connect);
+header("location:apres_annulation.html");
 //
 ?>
