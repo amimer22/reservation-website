@@ -323,7 +323,7 @@ include("main.php");
             <button onclick="hidepopup('popup3')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
             <hr>
           </div>
-          <form action="">
+          <form  action="delete_reservation.php" method="POST">
             <div class="input-group mb-1">
               <span class="input-group-text bg-white rounded-0" id="emedSpan">E-MED-</span>
               <input type="text" class="form-control rounded-0" placeholder="Enter Code" name="specialcode"> 
@@ -345,7 +345,7 @@ include("main.php");
             </div>
             
             <div class="d-grid">
-                <input class="btn btn-block btn-danger rounded-0" type="text" value="Annuler">
+                <input class="btn btn-block btn-danger rounded-0" type="submit" value="Annuler">
             </div>
           </form>
         </div>
