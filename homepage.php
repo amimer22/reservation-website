@@ -84,6 +84,7 @@
       z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
       cursor: pointer; /* Add a pointer on hover */
     }
+    .msg {text-align:center}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -387,7 +388,9 @@ include("main.php");
             <button onclick="hidepopup('popup3')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
             <hr>
           </div>
-          <div id="msg" class="msg">cliquer pour annuler</div>
+          <div id="msg" class="msg text-white p-1 bg-danger">
+            cliquer pour annuler
+          </div>
           <form  id="delete_form"  action="delete_reservation.php" method="POST">
             <div class="input-group mb-1">
               <span class="input-group-text bg-white rounded-0" id="emedSpan">E-MED-</span>
