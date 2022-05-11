@@ -105,6 +105,10 @@
           data: formData,
           success: function(result) {
             $("#msg").html(result);
+
+            if (result==="Reservation annulé") {
+              location.reload();
+            }
           }
       });
        event.preventDefault();
