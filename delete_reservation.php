@@ -19,8 +19,10 @@ $checkResult=mysqli_num_rows($checkSqlResult);
         $sql = "DELETE  FROM reservation WHERE specialcode='$specialCodeDelete'";
         //delete if exists
         $delete=mysqli_query($db_connect,$sql) or die ("La requête a échoué anuller");
-        //header("location:apres_annulation.html");
-        echo "<p> ok </p>"; 
+        
+        echo "Reservation annulé";
+        //sleep(2);
+        //header("location:homepage.php"); 
       }
   } 
   else {
