@@ -85,7 +85,49 @@
       cursor: pointer; /* Add a pointer on hover */
     }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+  
+  $(document).ready(function(){
+    var myform=$('#delete_form');  
+    myform.submit(function(event) {
+     
+      var formData = {
+      specialcode1: $("#specialcode1").val(),
+      name1: $("#name1").val(),
+      email1: $("#email1").val(),
+      };
+    
+      $.ajax({
+          type: "POST",
+          url: "delete_reservation.php",
+          data: formData,
+          success: function(result) {
+            $("#msg").html(result);
+          }
+      });
+       event.preventDefault();
+    });
+  });
+  
+   /* function annuler(event) {
+      event.preventDefault();
+      var formData = {
+      specialcode: $("#specialcode1").val(),
+      name1: $("#name1").val(),
+      email1: $("#email1").val(),
+      };
+
+      $.ajax({
+          type: "POST",
+          url: "delete_reservation.php",
+          data: formData,
+          success: function(result) {
+              alert(result);
+          }
+      });
+    }*/
+
    //script popup products
   function showpopup(params) {
       var popup=document.getElementById(params);
@@ -132,6 +174,28 @@
   function spinneroff() {
     document.getElementById("overlay").style.display = "none";
   }
+
+//
+/*function showUser(specialcode1,name1,email1) {
+  /*$.ajax ({
+    url:"delete_reservation.php",
+    method:"POST",
+    data:{specialcode:specialcode,name:name,email:email},
+  });
+  var $specialCodeDelete = document.getElementById(specialcode1);
+  var $nomDelete = document.getElementById(name1);
+  var $emailDelete = document.getElementById(email1);
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("msg").innerHTML=this.responseText;
+    }
+  };
+  xmlhttp.open("GET","delete_reservation.php",true);
+  xmlhttp.send();
+}*/
+
+
 </script>
 <?php
 include("main.php");
@@ -323,29 +387,30 @@ include("main.php");
             <button onclick="hidepopup('popup3')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
             <hr>
           </div>
-          <form  action="delete_reservation.php" method="POST">
+          <div id="msg" class="msg">cliquer pour annuler</div>
+          <form  id="delete_form"  action="delete_reservation.php" method="POST">
             <div class="input-group mb-1">
               <span class="input-group-text bg-white rounded-0" id="emedSpan">E-MED-</span>
-              <input type="text" class="form-control rounded-0" placeholder="Enter Code" name="specialcode"> 
+              <input type="text" class="form-control rounded-0" id="specialcode1" placeholder="Enter Code" name="specialcode1"> 
               <span class="input-group-text bg-white rounded-0" id="emedSpan"><small> Code oublié ?</small></span>            
             </div>
             <div class="row mb-1">
               <div class="col">
                 <div class="form-floating">
-                  <input type="text" class="form-control form-control-sm  rounded-0" id="" placeholder="Enter name" name="name">
+                  <input type="text" class="form-control form-control-sm  rounded-0" id="name1" placeholder="Enter name" name="name1">
                   <label for="name">Nom</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-floating">
-                  <input type="text" class="form-control form-control-sm  rounded-0" id="" placeholder="Enter " name="email">
+                  <input type="text" class="form-control form-control-sm  rounded-0" id="email1" placeholder="Enter " name="email1">
                   <label for="name">Email</label>
                 </div>
               </div>
             </div>
             
             <div class="d-grid">
-                <input class="btn btn-block btn-danger rounded-0" type="submit" value="Annuler">
+                <input type="submit" class="btn btn-block btn-danger rounded-0" value="Annuler">
             </div>
           </form>
         </div>
