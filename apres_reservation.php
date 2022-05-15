@@ -21,7 +21,7 @@
 <script>
   
 </script>
-<?php include("main.php"); ?>
+
 <body onload="webstorage('')">
     <div class="message p-3 bg-primary"> 
         <a href="homepage.php" class="text-white float-start"><i class="fas fa-chevron-left"></i><h6 class="d-inline"> Accueil</h6></a>                   
@@ -37,10 +37,32 @@
                     <h5 class="brandname"> E-MED</h5>
                     <div class="infos">
                       <?php
+                        include("main.php");
                         $specialcode= $_REQUEST["specialcode"];
-                        echo "CODE :";
-                        echo $specialcode ; 
                         
+                        
+                        $sqlcheck = "SELECT * FROM reservation WHERE specialcode='$specialcode'";
+                        $checkSqlResult=mysqli_query($db_connect,$sqlcheck) or die ("La requête a échoué check");
+                        //
+
+                        $checkResult=mysqli_num_rows($checkSqlResult);
+                        //
+                          if ($checkResult>0) {
+                              while ($row=mysqli_fetch_assoc($checkSqlResult)) {                     
+                                
+                                echo $row["specialcode"];
+                                echo $row["name"];
+                                echo $row["departement"];
+                                echo $row["medecin"];
+                                echo $row["date"];
+                                echo $row["horaire"];
+                                
+                              }
+                          } 
+                          else {
+                              echo "error try again";
+
+                            }
                       ?>
                     </div>
                     <hr>
