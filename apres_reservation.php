@@ -17,6 +17,7 @@
     .centring {margin: auto; display: flex;justify-content: center; align-items: center;}
     .message h5 {text-align: center;}
     .message a {text-decoration: none;}
+    .ticket {border:solid 2px}
 </style>
 <script>
   
@@ -33,13 +34,14 @@
         <br>
         <div class="row">
             <div class="col-sm-6">
-                <div class="ticket">
+                <div class="ticket p-2">
                     <h5 class="brandname"> E-MED</h5>
                     <div class="warning bg-warning p-1">
                         <p class="text-center"> <small> <b>Utilisation du code est necessaire pour modification ou annulation du rdv</b> </small></p>
                     </div>
+                    <hr>
                     <div class="infos">
-                      <h6>Détail du patient</h6>
+                      <h5>Détail du patient</h5>
                       <?php
                         include("main.php");
                         $specialcode= $_REQUEST["specialcode"];
@@ -91,7 +93,7 @@
                           <p><img src="https://img.icons8.com/ios/20/000000/apple-mail.png"/> e-med@gmail.com</p>
                           <p><img src="https://img.icons8.com/ios-filled/20/000000/apple-phone.png"/> 0545789845</p>
                         </div>   
-                        <div class="d-inline-block">
+                        <div class="d-inline-block float-end">
                           <p><img src="https://img.icons8.com/material-outlined/20/000000/marker.png"/> Garidi, Kouba, 16000 </p>
                           <p><img src="https://img.icons8.com/material-outlined/20/000000/domain.png"/> https://E-MED.com</p>
                         </div>
