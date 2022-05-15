@@ -50,18 +50,29 @@
                           if ($checkResult>0) {
                               while ($row=mysqli_fetch_assoc($checkSqlResult)) {                     
                                 
+                                echo '<p>' ;
                                 echo $row["specialcode"];
+                                echo '</p>';
+                                echo '<p>' ;
                                 echo $row["name"];
+                                echo '</p>';
+                                echo '<p>' ;
                                 echo $row["departement"];
+                                echo '</p>';
+                                echo '<p>' ;
                                 echo $row["medecin"];
+                                echo '</p>';
+                                echo '<p>' ;
                                 echo $row["date"];
+                                echo '</p>';
+                                echo '<p>' ;
                                 echo $row["horaire"];
-                                
+                                echo '</p>';
+                                                                                                                             
                               }
                           } 
                           else {
                               echo "error try again";
-
                             }
                       ?>
                     </div>
