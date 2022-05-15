@@ -141,7 +141,7 @@
           data: formData, 
           success : function() {
             console.log(specialcode);
-            window.location.replace("test_ticket.php?specialcode="+specialcode.value,true);
+            window.location.replace("apres_reservation.php?specialcode="+specialcode.value,true);
             }                  
       });
       /*var formData1 = {
