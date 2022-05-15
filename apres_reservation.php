@@ -35,7 +35,11 @@
             <div class="col-sm-6">
                 <div class="ticket">
                     <h5 class="brandname"> E-MED</h5>
+                    <div class="warning bg-warning p-1">
+                        <p class="text-center"> <small> <b>Utilisation du code est necessaire pour modification ou annulation du rdv</b> </small></p>
+                    </div>
                     <div class="infos">
+                      <h6>Détail du patient</h6>
                       <?php
                         include("main.php");
                         $specialcode= $_REQUEST["specialcode"];
@@ -50,24 +54,29 @@
                           if ($checkResult>0) {
                               while ($row=mysqli_fetch_assoc($checkSqlResult)) {                     
                                 
-                                echo '<p>' ;
-                                echo $row["specialcode"];
-                                echo '</p>';
-                                echo '<p>' ;
+                                echo '<p class="bg-warning p-1"><b>Code</b> <span class="float-end"> ' ;
+                                echo  $row["specialcode"];
+                                echo '</span></p>';
+                                echo '<p> <b>Nom </b> <span class="float-end">' ;
                                 echo $row["name"];
-                                echo '</p>';
-                                echo '<p>' ;
+                                echo '</span></p>';
+                                echo '<p> <b>Age </b> <span class="float-end">' ;
+                                echo $row["age"];
+                                echo '</span></p>';
+                                echo "<hr>";
+                                echo "<h5>Détail du rendez-vous</h5>";
+                                echo '<p> <b>Departement</b> <span class="float-end">' ;
                                 echo $row["departement"];
-                                echo '</p>';
-                                echo '<p>' ;
+                                echo '</span></p>';
+                                echo '<p> <b>Doctor</b> <span class="float-end">' ;
                                 echo $row["medecin"];
-                                echo '</p>';
-                                echo '<p>' ;
+                                echo '</span></p>';
+                                echo '<p> <b>Date</b> <span class="float-end">' ;
                                 echo $row["date"];
-                                echo '</p>';
-                                echo '<p>' ;
+                                echo '</span></p>';
+                                echo '<p> <b>Heure</b> <span class="float-end">' ;
                                 echo $row["horaire"];
-                                echo '</p>';
+                                echo '</span></p>';
                                                                                                                              
                               }
                           } 
@@ -77,16 +86,18 @@
                       ?>
                     </div>
                     <hr>
-                    <div class="contact">
-                        <p>Pour nous contacter : </p>
-                        <p>Email :</p>
-                        <p>Tel :</p>
-                        <p>adresse : </p>
-                        <p>website :</p>
+                    <div class="contact d-block">
+                        <div class="d-inline-block">
+                          <p><img src="https://img.icons8.com/ios/20/000000/apple-mail.png"/> e-med@gmail.com</p>
+                          <p><img src="https://img.icons8.com/ios-filled/20/000000/apple-phone.png"/> 0545789845</p>
+                        </div>   
+                        <div class="d-inline-block">
+                          <p><img src="https://img.icons8.com/material-outlined/20/000000/marker.png"/> Garidi, Kouba, 16000 </p>
+                          <p><img src="https://img.icons8.com/material-outlined/20/000000/domain.png"/> https://E-MED.com</p>
+                        </div>
+                        
                     </div>
-                    <div class="warning bg-warning p-1">
-                        <p>Utilisation du code est necessaire pour modification ou annulation du rdv</p>
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-sm-6">
