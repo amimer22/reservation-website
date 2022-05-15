@@ -88,7 +88,7 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-  
+  //annuler le  rdv
   $(document).ready(function(){
     var myform=$('#delete_form');  
     myform.submit(function(event) {
@@ -114,7 +114,49 @@
        event.preventDefault();
     });
   });
-  
+  //
+  //reserver un rdv + envoyer les donneés a after_reservation
+  $(document).ready(function(){
+    
+    var form=$('#reservation_form');  
+    form.submit(function(event) {
+      event.preventDefault();
+      var formData = {
+      specialcode: $("#specialcode").val(),
+      departements: $("#departements").val(),
+      medecins: $("#medecins").val(),
+      email: $("#email").val(),
+      phone: $("#phone").val(),
+      name: $("#name").val(),
+      age: $("#age").val(),
+      date: $("#date").val(),
+      time: $("#time").val(),
+      comment: $("#comment").val(),
+      };
+      //data: $('#reservation_form').serialize(),
+      
+      $.ajax({
+          type: "POST",
+          url: "reservation.php",
+          data: formData, 
+          success : function() {
+            console.log(specialcode);
+            window.location.replace("test_ticket.php?specialcode="+specialcode.value,true);
+            }                  
+      });
+      /*var formData1 = {
+      specialcode: $("#specialcode").val(),
+      name: $("#name").val(),
+      };
+      $.ajax({
+          type: "POST",
+          url: "test_ticket.php",
+          data: formData1,
+                 
+      });*/
+    });
+  });
+/*
    /* function annuler(event) {
       event.preventDefault();
       var formData = {
@@ -132,7 +174,14 @@
           }
       });
     }*/
-
+    //webstorage
+  if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("name",document.getElementById("name").value);
+  
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }
    //script popup products
   function showpopup(params) {
       var popup=document.getElementById(params);
@@ -175,10 +224,6 @@
   document.getElementById("reservation-form").style.filter ='blur(8px)' ;
   document.getElementById("upper-popup").style.filter ='blur(8px)' ;
 }
-
-  function spinneroff() {
-    document.getElementById("overlay").style.display = "none";
-  }
 
 //
 /*function showUser(specialcode1,name1,email1) {
@@ -236,6 +281,7 @@ include("main.php");
           <div class="row">
             <div class="col-sm-5">
               <h5>Welcome to E-Med</h5>
+              <h5 id="result"></h5>
               <h1>THE BEST Medical services</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
@@ -270,7 +316,7 @@ include("main.php");
           </div>
                 
           
-          <form action="reservation.php" id="reservation-form" class="reservation-form" method="post">
+          <form  id="reservation_form" class="reservation-form" method="post">
             <div class="input-group mb-1">
               <span class="input-group-text bg-white rounded-0">Code</span>
               
@@ -338,7 +384,7 @@ include("main.php");
               <label for="comment">Comments</label>
             </div> 
             <div class="d-grid">
-              <input type="submit" onclick="spinneron('')" value="Confirmer" class="btn btn-block btn-primary p-2">
+              <input type="submit"  onclick="spinneron('')" value="Confirmer" class="btn btn-block btn-primary p-2">
               
             </div>
             
