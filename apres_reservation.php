@@ -17,23 +17,48 @@
     .centring {margin: auto; display: flex;justify-content: center; align-items: center;}
     .message h5 {text-align: center;}
     .message a {text-decoration: none;}
-    .ticket {border:solid 2px}
+    .ticket {border:dotted 2px; border-radius:3px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 </style>
 <script>
   
 </script>
 
 <body onload="webstorage('')">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container-fluid">
+      <a href="homepage.php" class="text-white"><i class="fas fa-chevron-left"></i><h6 class="d-inline"> Accueil</h6></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Telecharger ticket</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">telecharger comme PDF</a></li>
+              <li><a class="dropdown-item" href="#">Copier dans presse papier</a></li>
+              <li><a class="dropdown-item" href="#">A third link</a></li>
+            </ul>
+          </li> 
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
     <div class="message p-3 bg-primary"> 
-        <a href="homepage.php" class="text-white float-start"><i class="fas fa-chevron-left"></i><h6 class="d-inline"> Accueil</h6></a>                   
+                           
         <h5 class="text-white">Reservation eregistrée <i class="far fa-calendar-check"></i></h5>
     </div>
-    
-    <div class="container">
-        
+          
+       
+    <div class="container">       
         <br>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 centring">
                 <div class="ticket p-2">
                     <h5 class="brandname"> E-MED</h5>
                     <div class="warning bg-warning p-1">
@@ -101,25 +126,8 @@
                     </div>
                     
                 </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="description">
-                    <p>Choisissez une des methodes suivantes pour enregister votre tickets</p>
-                </div>
-                <div class="options">
-                    <div class="d-grid">
-                        <button class="btn rounded-0 btn-block btn-primary">Telecharger comme PDF</button>
-                        <hr>
-                        <button class="btn rounded-0 btn-block btn-primary">Copier dans press-papier</button>
-                        
-                
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        
-        
+            </div>        
+        </div>           
     </div>
     <hr>
     <footer class="">
