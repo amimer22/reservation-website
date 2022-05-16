@@ -15,9 +15,20 @@
 </head>
 <style>
     .centring {margin: auto; display: flex;justify-content: center; align-items: center;}
+    .message {height:300px}
     .message h5 {text-align: center;}
     .message a {text-decoration: none;}
-    .ticket {border:dotted 2px; border-radius:3px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+    .ticket {border:solid 2px #ededed; border-radius:3px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      position: relative;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      z-index: 10;
+      background-color: white;
+      width: 450px;
+      max-width: 90%;
+    }
+    .accueil {text-decoration :none}
 </style>
 <script>
   
@@ -26,7 +37,7 @@
 <body onload="webstorage('')">
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <div class="container-fluid">
-      <a href="homepage.php" class="text-white"><i class="fas fa-chevron-left"></i><h6 class="d-inline"> Accueil</h6></a>
+      <a href="homepage.php" class="accueil text-white"><i class="fas fa-chevron-left"></i><h6 class="d-inline"> Accueil</h6></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -47,87 +58,88 @@
         </ul>
         
       </div>
-    </div>
+    </div> 
   </nav>
-    <div class="message p-3 bg-primary"> 
-                           
-        <h5 class="text-white">Reservation eregistrée <i class="far fa-calendar-check"></i></h5>
-    </div>
+  <div class="message bg-primary"> 
+      <h5 class="text-white">Reservation eregistrée <i class="far fa-calendar-check"></i></h5>
+  </div>
           
-       
+     <br><br>  
     <div class="container">       
-        <br>
-        <div class="row">
-            <div class="col-sm-6 centring">
-                <div class="ticket p-2">
-                    <h5 class="brandname"> E-MED</h5>
-                    <div class="warning bg-warning p-1">
-                        <p class="text-center"> <small> <b>Utilisation du code est necessaire pour modification ou annulation du rdv</b> </small></p>
-                    </div>
-                    <hr>
-                    <div class="infos">
-                      <h5>Détail du patient</h5>
-                      <?php
-                        include("main.php");
-                        $specialcode= $_REQUEST["specialcode"];
-                        
-                        
-                        $sqlcheck = "SELECT * FROM reservation WHERE specialcode='$specialcode'";
-                        $checkSqlResult=mysqli_query($db_connect,$sqlcheck) or die ("La requête a échoué check");
-                        //
+      <br>           
+      <div class="ticket p-2 bg-white">
+          
+          <div class="warning bg-warning p-1">
+              <p class="text-center"> <small> <b>Utilisation du code est necessaire pour modification ou annulation du rdv</b> </small></p>
+          </div>
+          <hr>
+          <div class="infos">
+            <h5>Détail du patient</h5>
+            <?php
+              include("main.php");
+              $specialcode= $_REQUEST["specialcode"];
+              
+              
+              $sqlcheck = "SELECT * FROM reservation WHERE specialcode='$specialcode'";
+              $checkSqlResult=mysqli_query($db_connect,$sqlcheck) or die ("La requête a échoué check");
+              //
 
-                        $checkResult=mysqli_num_rows($checkSqlResult);
-                        //
-                          if ($checkResult>0) {
-                              while ($row=mysqli_fetch_assoc($checkSqlResult)) {                     
-                                
-                                echo '<p class="bg-warning p-1"><b>Code</b> <span class="float-end"> ' ;
-                                echo  $row["specialcode"];
-                                echo '</span></p>';
-                                echo '<p> <b>Nom </b> <span class="float-end">' ;
-                                echo $row["name"];
-                                echo '</span></p>';
-                                echo '<p> <b>Age </b> <span class="float-end">' ;
-                                echo $row["age"];
-                                echo '</span></p>';
-                                echo "<hr>";
-                                echo "<h5>Détail du rendez-vous</h5>";
-                                echo '<p> <b>Departement</b> <span class="float-end">' ;
-                                echo $row["departement"];
-                                echo '</span></p>';
-                                echo '<p> <b>Doctor</b> <span class="float-end">' ;
-                                echo $row["medecin"];
-                                echo '</span></p>';
-                                echo '<p> <b>Date</b> <span class="float-end">' ;
-                                echo $row["date"];
-                                echo '</span></p>';
-                                echo '<p> <b>Heure</b> <span class="float-end">' ;
-                                echo $row["horaire"];
-                                echo '</span></p>';
-                                                                                                                             
-                              }
-                          } 
-                          else {
-                              echo "error try again";
-                            }
-                      ?>
-                    </div>
-                    <hr>
-                    <div class="contact d-block">
-                        <div class="d-inline-block">
-                          <p><img src="https://img.icons8.com/ios/20/000000/apple-mail.png"/> e-med@gmail.com</p>
-                          <p><img src="https://img.icons8.com/ios-filled/20/000000/apple-phone.png"/> 0545789845</p>
-                        </div>   
-                        <div class="d-inline-block float-end">
-                          <p><img src="https://img.icons8.com/material-outlined/20/000000/marker.png"/> Garidi, Kouba, 16000 </p>
-                          <p><img src="https://img.icons8.com/material-outlined/20/000000/domain.png"/> https://E-MED.com</p>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-            </div>        
-        </div>           
+              $checkResult=mysqli_num_rows($checkSqlResult);
+              //
+                if ($checkResult>0) {
+                    while ($row=mysqli_fetch_assoc($checkSqlResult)) {                     
+                      
+                      echo '<p class="bg-warning p-1"><b>Code</b> <span class="float-end"> ' ;
+                      echo  $row["specialcode"];
+                      echo '</span></p>';
+                      echo '<p> <b>Nom </b> <span class="float-end">' ;
+                      echo $row["name"];
+                      echo '</span></p>';
+                      echo '<p> <b>Age </b> <span class="float-end">' ;
+                      echo $row["age"];
+                      echo '</span></p>';
+                      echo "<hr>";
+                      echo "<h5>Détail du rendez-vous</h5>";
+                      echo '<p> <b>Departement</b> <span class="float-end">' ;
+                      echo $row["departement"];
+                      echo '</span></p>';
+                      echo '<p> <b>Doctor</b> <span class="float-end">' ;
+                      echo $row["medecin"];
+                      echo '</span></p>';
+                      echo '<p> <b>Date</b> <span class="float-end">' ;
+                      echo $row["date"];
+                      echo '</span></p>';
+                      echo '<p> <b>Heure</b> <span class="float-end">' ;
+                      echo $row["horaire"];
+                      echo '</span></p>';
+                                                                                                                    
+                    }
+                } 
+                else {
+                    echo "error try again";
+                  }
+            ?>
+          </div>
+          <hr>
+          <div class="contact d-block">
+              <div class="d-inline-block">
+                <small>
+                  <p><img src="https://img.icons8.com/ios/20/000000/apple-mail.png"/> e-med@gmail.com</p>
+                  <p><img src="https://img.icons8.com/ios-filled/20/000000/apple-phone.png"/> 0545789845</p>
+                </small>
+                
+              </div>   
+              <div class="d-inline-block float-end">
+                <small>
+                  <p><img src="https://img.icons8.com/material-outlined/20/000000/marker.png"/> Garidi, Kouba, 16000 </p>
+                  <p><img src="https://img.icons8.com/material-outlined/20/000000/domain.png"/> https://E-MED.com</p> 
+                </small>
+                
+              </div>
+              
+          </div>
+          
+      </div>                
     </div>
     <hr>
     <footer class="">
