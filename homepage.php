@@ -438,8 +438,8 @@ include("main.php");
             <button onclick="hidepopup('popup3')" class="btn btn-sm btn-primary d-inline float-end rounded-0">Hide</button>
             <hr>
           </div>
-          <div id="msg" class="msg text-white p-1 bg-danger">
-            cliquer pour annuler
+          <div id="msg" class="msg p-1">
+           Inserer vos donneés
           </div>
           <form  id="delete_form"  action="delete_reservation.php" method="POST">
             <div class="input-group mb-1">

@@ -20,13 +20,13 @@ $checkResult=mysqli_num_rows($checkSqlResult);
         //delete if exists
         $delete=mysqli_query($db_connect,$sql) or die ("La requête a échoué anuller");
         
-        echo "Reservation annulé";
+        echo "<b>Reservation annulé</b>";
         //sleep(2);
         //header("location:homepage.php"); 
       }
   } 
   else {
-       echo "Données inserées existent pas";
+       echo "<b>Données inserées existent pas</b>";
 
     }
   
