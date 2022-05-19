@@ -603,20 +603,20 @@ include("main.php");
         </div>
         <div class="col-sm-4">
           <h5>Links</h5>
-          <a class="btn btn-link" href="#">Link 1</a>
+          <a class="btn btn-link" href="#">A propos</a>
           <br>
-          <a class="btn btn-link" href="#">Link 1</a>
+          <a class="btn btn-link" href="#">Notre Blog</a>
           <br>
-          <a class="btn btn-link" href="#">Link 1</a>
+         
           <br>
         </div>
         <div class="col-sm-4">
           <h5>Links</h5>
-          <a class="btn btn-link" href="#">Link 1</a>
+          <a class="btn btn-link" href="#">Connecter</a>
           <br>
-          <a class="btn btn-link" href="#">Link 1</a>
+          <a class="btn btn-link" href="#">Plus d'infos</a>
           <br>
-          <a class="btn btn-link" href="#">Link 1</a>
+          
           <br>
         </div>
       </div>
