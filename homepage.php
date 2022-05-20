@@ -337,9 +337,9 @@ include("main.php");
             </select>
             <select class="form-select mb-1" aria-label="Default select example" id="medecins" name="medecins">
               <option selected>Select Doctor</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option>AGLI Dalil</option>
+              <option>ALIMIHOUB Akram</option>
+              <option>ANAD Yacine</option>
             </select>           
             <div class="row mb-1">
               <div class="col">
