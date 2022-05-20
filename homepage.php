@@ -283,9 +283,8 @@ include("main.php");
               <h5>Welcome to E-Med</h5>
               <h5 id="result"></h5>
               <h1>THE BEST Medical services</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-              <p>dit dolorum. Incidunt, repellendus dolores?</p>
+              <p>Afin de vous éviter les déplacements inutiles, la Clinique met à votre disposition un service de prise de rendez-vous en ligne. </p>
+              <p>Avec des options pour la modification ou annulation de votre rendez-vous</p>
               <br>
               <div class="d-grid">
                 <button onclick="showpopup('popup')" type="button" class="btn btn-block btn-primary rounded-0 p-3 m-1">Prendre un rendez-vous  <i class="fas fa-calendar-plus"></i></button> 
@@ -481,6 +480,7 @@ include("main.php");
             <button onclick="afterReservationClose('popup1')">ok</button>
           </div>
         </div-->
+        <br><br><br><br>
         <div class="services">
             <br>
             <h2 class="centring">Nos services</h2>
