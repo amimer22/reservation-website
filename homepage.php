@@ -261,13 +261,13 @@ include("main.php");
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Nos services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">A propos</a>
         </li>    
       </ul>
     </div>
@@ -447,7 +447,7 @@ include("main.php");
           </div>
           <form  id="delete_form"  action="delete_reservation.php" method="POST">
             <div class="input-group mb-1">
-              <span class="input-group-text bg-white rounded-0" id="emedSpan">E-MED-</span>
+              
               <input type="text" class="form-control rounded-0" id="specialcode1" placeholder="Enter Code" name="specialcode1"> 
               <span class="input-group-text bg-white rounded-0" id="emedSpan"><small> Code oublié ?</small></span>            
             </div>
