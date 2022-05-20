@@ -114,8 +114,8 @@
        event.preventDefault();
     });
   });
-  //
-  //reserver un rdv + envoyer les donneés a after_reservation
+  
+  //reserver un rdv + envoyer les donneés a database et after_reservation pour ticket
   $(document).ready(function(){
     
     var form=$('#reservation_form');  
@@ -182,27 +182,27 @@
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
   }
-   //script popup products
+   //open popup
   function showpopup(params) {
-      var popup=document.getElementById(params);
+      var popup=document.getElementById(params); //get popup id through the parameter
       
-      popup.style.transform = 'translate(-50%, -50%) scale(1)';
+      popup.style.transform = 'translate(-50%, -50%) scale(1)'; //change popup style onclick - show it 
 
           
     }
   function hidepopup(params) {
-    var popup=document.getElementById(params);       
+    var popup=document.getElementById(params);    //get popup id through the parameter   
     
-    popup.style.transform = 'translate(-50%, -50%) scale(0)';
+    popup.style.transform = 'translate(-50%, -50%) scale(0)';  //change popup style onclick - hide it
     
   }
-  //copier
+  //copier - dans reservation popup
   function copy() {
-    var CopySpan = document.getElementById("CopySpan");
-    var text = document.getElementById("specialcode").value;
-    var textCopied = navigator.clipboard.writeText(text);
+    var CopySpan = document.getElementById("CopySpan"); // call the span to click on
+    var text = document.getElementById("specialcode").value; //call the input with the value 
+    var textCopied = navigator.clipboard.writeText(text); // copy to clipboard
     
-    CopySpan.innerHTML ="Copied!";
+    CopySpan.innerHTML ="Copied!"; // change span text to copied!
   }
   //after reservation 
   function afterReservation(params) {
@@ -218,10 +218,10 @@
         popup1.style.transform = 'translate(-50%, -50%) scale(0)';
         
   }
-  //
+  // code du spinner aprés confirmation du rdv
   function spinneron() {
-  document.getElementById("spinner").style.display = "block";
-  document.getElementById("reservation-form").style.filter ='blur(8px)' ;
+  document.getElementById("spinner").style.display = "block"; // call the div spinner with id
+  document.getElementById("reservation_form").style.filter ='blur(8px)' ; // change the blur in style 
   document.getElementById("upper-popup").style.filter ='blur(8px)' ;
 }
 
@@ -298,6 +298,8 @@ include("main.php");
           </div>          
         </div> 
         <br><br>
+
+        <!-- partie popup reservation -->
         <div class="popup-hide" id="popup">
           <div class="d-block" id="upper-popup">
             <h5 class="d-inline">Prendre un rendez-vous</h5>
@@ -434,6 +436,8 @@ include("main.php");
             </div>
           </form>
         </div> -->
+
+        <!-- partie popup annuler / non visible / visible aprés cliquer sur btn reserver -->
         <div class="popup-hide" id="popup3">
           <div class="d-block" id="upper-popup3">
             <h5 class="d-inline">Annuler un rendez-vous </h5>
@@ -471,7 +475,7 @@ include("main.php");
           </form>
         </div>
         
-        <!-- after reservation popup -->
+        <!-- after reservation popup /non visible / visible aprés cliquer sur btn annuler  -->
         <!--div class="popup-hide1" id='popup1'>
           <div class="message">
             <h5>Dont forget code</h5>
@@ -481,6 +485,8 @@ include("main.php");
           </div>
         </div-->
         <br><br><br><br>
+
+        <!-- partie services -->
         <div class="services">
             <br>
             <h2 class="centring">Nos services</h2>
@@ -508,6 +514,7 @@ include("main.php");
             <br><br>
         </div>   
         <br><br>
+        <!-- partie departements -->
         <div class="departements">
             <br>
             <h2 class="centring">Nos Départements</h2>
@@ -543,6 +550,7 @@ include("main.php");
            <br>
         </div> 
         <br><br>
+        <!-- partie medecins -->
         <div class="medecins">
             <br>
             <h2 class="centring">Nos Medecins</h2>
