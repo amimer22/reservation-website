@@ -260,7 +260,7 @@ include("main.php");
 ?>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">E-Med</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -294,7 +294,7 @@ include("main.php");
 <div class="">
     <br><br>
     <div class="">
-        <div class="container-fluid introduction" id="section0">
+        <div class="container-fluid introduction pt-5" id="section0">
           <div class="row">
             <div class="col-sm-5">
               <h5>Welcome to E-Med</h5>
@@ -504,7 +504,7 @@ include("main.php");
         <br><br><br><br>
 
         <!-- partie services -->
-        <div class="services" id="section1">
+        <div class="services pt-5" id="section1">
             <br>
             <h2 class="centring">Nos services</h2>
             <br>
@@ -532,7 +532,7 @@ include("main.php");
         </div>   
         <br><br>
         <!-- partie departements -->
-        <div class="departements" id="section2">
+        <div class="departements pt-5" id="section2">
             <br>
             <h2 class="centring">Nos Départements</h2>
             <br>
@@ -568,7 +568,7 @@ include("main.php");
         </div> 
         <br><br>
         <!-- partie medecins -->
-        <div class="medecins" id="section3">
+        <div class="medecins pt-5" id="section3">
             <br>
             <h2 class="centring">Nos Medecins</h2>
             <br>
@@ -602,7 +602,7 @@ include("main.php");
         </div>
         <br>
         <!-- partie a propos -->
-        <div class="a-propos bg-primary p-2" id="section4">
+        <div class="a-propos bg-primary p-5" id="section4">
           <br>
           <h2 class="text-white text-center">A propos</h2>
           <br>
@@ -649,7 +649,7 @@ include("main.php");
   
 <br><hr>
 
-<footer class="" id="section5">
+<footer class="pt-5" id="section5">
   <div class="container">
     <div class="map centring">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25583.532688415577!2d3.06069184003464!3d36.72396411574034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad41c48b28b5%3A0x85ce2eadf67d55fe!2sKouba!5e0!3m2!1sfr!2sdz!4v1653001093491!5m2!1sfr!2sdz" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
