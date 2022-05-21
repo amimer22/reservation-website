@@ -13,6 +13,20 @@
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
     crossorigin="anonymous">
 </head>
+<script src="html2pdf.bundle.min.js"></script>
+<script>
+  function download(params) {
+    var ticket=document.getElementById("ticket1");
+    var opt = {
+      margin : 2,
+      filename :'myticket.pdf',
+      image : {type: 'jpeg' , quality:0.98},
+      html2canvas: {scale:2},
+      jsPDF: {unit:'in',format:'letter',}
+    };
+    html2pdf(ticket,opt);
+  }
+</script>
 <style>
     .centring {margin: auto; display: flex;justify-content: center; align-items: center;}
     .message {height:300px}
@@ -50,7 +64,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Telecharger ticket</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">telecharger comme PDF</a></li>
+              <li><button class="dropdown-item" id="d-pdf" onclick="download('')" >telecharger comme PDF</button></li>
               <li><a class="dropdown-item" href="#">Copier dans presse papier</a></li>
               <li><a class="dropdown-item" href="#">A third link</a></li>
             </ul>
@@ -65,9 +79,9 @@
   </div>
           
      <br><br>  
-    <div class="container">       
+    <div class="container" id="ticket1">       
       <br>           
-      <div class="ticket p-2 bg-white">
+      <div class="ticket p-2 bg-white" >
           
           <div class="warning bg-warning p-1">
               <p class="text-center"> <small> <b>Utilisation du code est necessaire pour modification ou annulation du rdv</b> </small></p>
