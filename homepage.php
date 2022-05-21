@@ -32,7 +32,7 @@
     /* dalil */
     .medecins .card {border: none;}
     .dr-infos {text-align: center;}
-    
+    .a-propos p {font-family: 'Bebas Neue', cursive; line-height: 2;}
     footer{}
 
     .popup-hide { position: fixed;
@@ -585,11 +585,31 @@ include("main.php");
                 </div>               
             </div>
             <br>
+        </div>
+        <br>
+        <!-- partie a propos -->
+        <div class="a-propos bg-primary p-2">
+          <br>
+          <h2 class="text-white text-center">A propos</h2>
+          <br>
+            <div class="row">
+              <div class="col-sm-6">
+                <h4 class="m-2 text-white">E-MED</h4>
+                <p class="m-2 text-white">
+                Centre médical leader en Algérie, car nous mettons à disposition de tout le secteur médical une salle d’angiographie exceptionnelle permettant à la fois la réalisation d’une panoplie variée de gestes interventionnels en cardiologie et en électrophysiologie cardiaque, mais surtout de neuroradiologie et d’angiologie interventionnelles évitant des chirurgies parfois lourdes ou permettant d’optimiser des gestes chirurgicaux inévitables Notre centre propose aussi des solutions innovatrices d’hépato-gastro-entérologie en Algérie car il est l’un des rares qui propose l’écho-endoscopie et le FibroScan hépatique et certainement le premier à proposer le diagnostic par vidéo capsule.
+                </p>
+              </div>
+              <div class="col-sm-6">
+                  <img style="width:500px;height:400px" class="img-fluid float-end" src="6.jpg" alt="">
+              </div>
+            </div>
         </div>       
     </div>
     
 </div>
+  
 <br><hr>
+
 <footer class="">
   <div class="container">
     <div class="map centring">
