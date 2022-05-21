@@ -595,12 +595,34 @@ include("main.php");
             <div class="row">
               <div class="col-sm-6">
                 <h4 class="m-2 text-white">E-MED</h4>
+                <br>
                 <p class="m-2 text-white">
                 Centre médical leader en Algérie, car nous mettons à disposition de tout le secteur médical une salle d’angiographie exceptionnelle permettant à la fois la réalisation d’une panoplie variée de gestes interventionnels en cardiologie et en électrophysiologie cardiaque, mais surtout de neuroradiologie et d’angiologie interventionnelles évitant des chirurgies parfois lourdes ou permettant d’optimiser des gestes chirurgicaux inévitables Notre centre propose aussi des solutions innovatrices d’hépato-gastro-entérologie en Algérie car il est l’un des rares qui propose l’écho-endoscopie et le FibroScan hépatique et certainement le premier à proposer le diagnostic par vidéo capsule.
                 </p>
               </div>
               <div class="col-sm-6">
-                  <img style="width:500px;height:400px" class="img-fluid float-end" src="6.jpg" alt="">
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img style="width:500px;height:400px" class="img-fluid float-end d-block w-100" src="6.jpg" alt="">
+                    </div>
+                    <div class="carousel-item">
+                    <img style="width:500px;height:400px" class="img-fluid float-end d-block w-100" src="7.png" alt="">
+                    </div>
+                    <div class="carousel-item">
+                    <img style="width:500px;height:400px" class="img-fluid float-end d-block w-100" src="6.jpg" alt="">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                  
               </div>
             </div>
         </div>       
