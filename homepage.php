@@ -23,13 +23,16 @@
     }
     .introduction button { font-family: 'Bebas Neue', cursive;
     }
+    /* yacine */
     .services {background-color: #0d6efd;}
     .services h2 {color: white;}
     .services .card:hover {background-color: #0d6efd; color: white;border: none;}
     .departements {background-color: white;}
     .departements .card:hover {background-color:#0d6efd;color: white;border: none;}
+    /* dalil */
     .medecins .card {border: none;}
     .dr-infos {text-align: center;}
+    
     footer{}
 
     .popup-hide { position: fixed;
