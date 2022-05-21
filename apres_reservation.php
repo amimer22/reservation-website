@@ -77,10 +77,10 @@
             <h5>Détail du patient</h5>
             <?php
               include("main.php");
-              $specialcode= $_REQUEST["specialcode"];
+              $specialcode= $_REQUEST["specialcode"]; //specialcode déja inseré
               
               
-              $sqlcheck = "SELECT * FROM reservation WHERE specialcode='$specialcode'";
+              $sqlcheck = "SELECT * FROM reservation WHERE specialcode='$specialcode'"; // selectionner tous dans la ligne  qui correspond au code dans db
               $checkSqlResult=mysqli_query($db_connect,$sqlcheck) or die ("La requête a échoué check");
               //
 
@@ -88,7 +88,7 @@
               //
                 if ($checkResult>0) {
                     while ($row=mysqli_fetch_assoc($checkSqlResult)) {                     
-                      
+                      // ecrire tous les donnéées qui correspond au code 
                       echo '<p class="bg-warning p-1"><b>Code</b> <span class="float-end"> ' ;
                       echo  $row["specialcode"];
                       echo '</span></p>';
