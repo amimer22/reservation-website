@@ -303,9 +303,10 @@ include("main.php");
 </nav>
 
 <div class="">
-    <br><br>
+    
     <div class="">
         <div class="container-fluid introduction pt-5" id="section0">
+          <br><br>
           <div class="row">
             <div class="col-sm-5">
               <h5>Welcome to E-Med</h5>
