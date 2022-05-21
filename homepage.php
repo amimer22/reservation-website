@@ -33,6 +33,7 @@
     .medecins .card {border: none;}
     .dr-infos {text-align: center;}
     .a-propos p {font-family: 'Bebas Neue', cursive; line-height: 2;}
+    .a-p-description {border : solid 2px white;background-color:white;color:#0d6efd;padding-bottom:55px}
     footer{}
 
     .popup-hide { position: fixed;
@@ -594,11 +595,14 @@ include("main.php");
           <br>
             <div class="row">
               <div class="col-sm-6">
-                <h4 class="m-2 text-white">E-MED</h4>
-                <br>
-                <p class="m-2 text-white">
-                Centre médical leader en Algérie, car nous mettons à disposition de tout le secteur médical une salle d’angiographie exceptionnelle permettant à la fois la réalisation d’une panoplie variée de gestes interventionnels en cardiologie et en électrophysiologie cardiaque, mais surtout de neuroradiologie et d’angiologie interventionnelles évitant des chirurgies parfois lourdes ou permettant d’optimiser des gestes chirurgicaux inévitables Notre centre propose aussi des solutions innovatrices d’hépato-gastro-entérologie en Algérie car il est l’un des rares qui propose l’écho-endoscopie et le FibroScan hépatique et certainement le premier à proposer le diagnostic par vidéo capsule.
-                </p>
+                <div class="a-p-description">
+                  <h4 class="m-2">E-MED</h4>
+                  <br>
+                  <p class="m-2">
+                  Centre médical leader en Algérie, car nous mettons à disposition de tout le secteur médical une salle d’angiographie exceptionnelle permettant à la fois la réalisation d’une panoplie variée de gestes interventionnels en cardiologie et en électrophysiologie cardiaque, mais surtout de neuroradiologie et d’angiologie interventionnelles évitant des chirurgies parfois lourdes ou permettant d’optimiser des gestes chirurgicaux inévitables Notre centre propose aussi des solutions innovatrices d’hépato-gastro-entérologie en Algérie car il est l’un des rares qui propose l’écho-endoscopie et le FibroScan hépatique et certainement le premier à proposer le diagnostic par vidéo capsule.
+                  </p>
+                </div>
+                
               </div>
               <div class="col-sm-6">
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
