@@ -14,6 +14,9 @@
     crossorigin="anonymous">
 </head>
 <style>
+    .navonscroll {
+     opacity:0.8;
+    }
     .centring {margin: auto; display: flex;justify-content: center; align-items: center;}
     .introduction h1{ font-family: 'Lobster', cursive; font-size:50px;
     }
@@ -179,16 +182,24 @@
       });
     }*/
     //webstorage
-  if (typeof(Storage) !== "undefined") {
+  /*if (typeof(Storage) !== "undefined") {
   // Store
   localStorage.setItem("name",document.getElementById("name").value);
   
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-  }
+  }*/
 
   //navbar links
-  
+  $(document).ready(function() {
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $("#nav").addClass("navonscroll");
+    } else {
+      $("#nav").removeClass("navonscroll");
+    }
+    });
+  });
 
    //open popup
   function showpopup(params) {
@@ -260,7 +271,7 @@ include("main.php");
 ?>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark sticky-top">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark sticky-top" id="nav">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">E-Med</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
