@@ -186,6 +186,10 @@
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
   }
+
+  //navbar links
+  
+
    //open popup
   function showpopup(params) {
       var popup=document.getElementById(params); //get popup id through the parameter
@@ -264,14 +268,23 @@ include("main.php");
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Nos services</a>
+      <li class="nav-item">
+          <a class="nav-link" id="link0" href="#section0">Accuiel</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" id="link1" href="#section1">Nos services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">A propos</a>
+          <a class="nav-link" id="link2" href="#section2">Nos departements</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="link3" href="#section3">Nos medecins</a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link" id="link4" href="#section4">A propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="link5" href="#section5">Contact</a>
         </li>    
       </ul>
     </div>
@@ -281,7 +294,7 @@ include("main.php");
 <div class="">
     <br><br>
     <div class="">
-        <div class="container-fluid introduction">
+        <div class="container-fluid introduction" id="section0">
           <div class="row">
             <div class="col-sm-5">
               <h5>Welcome to E-Med</h5>
@@ -491,7 +504,7 @@ include("main.php");
         <br><br><br><br>
 
         <!-- partie services -->
-        <div class="services">
+        <div class="services" id="section1">
             <br>
             <h2 class="centring">Nos services</h2>
             <br>
@@ -519,7 +532,7 @@ include("main.php");
         </div>   
         <br><br>
         <!-- partie departements -->
-        <div class="departements">
+        <div class="departements" id="section2">
             <br>
             <h2 class="centring">Nos Départements</h2>
             <br>
@@ -555,7 +568,7 @@ include("main.php");
         </div> 
         <br><br>
         <!-- partie medecins -->
-        <div class="medecins">
+        <div class="medecins" id="section3">
             <br>
             <h2 class="centring">Nos Medecins</h2>
             <br>
@@ -589,7 +602,7 @@ include("main.php");
         </div>
         <br>
         <!-- partie a propos -->
-        <div class="a-propos bg-primary p-2">
+        <div class="a-propos bg-primary p-2" id="section4">
           <br>
           <h2 class="text-white text-center">A propos</h2>
           <br>
@@ -636,7 +649,7 @@ include("main.php");
   
 <br><hr>
 
-<footer class="">
+<footer class="" id="section5">
   <div class="container">
     <div class="map centring">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25583.532688415577!2d3.06069184003464!3d36.72396411574034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad41c48b28b5%3A0x85ce2eadf67d55fe!2sKouba!5e0!3m2!1sfr!2sdz!4v1653001093491!5m2!1sfr!2sdz" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
