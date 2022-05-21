@@ -24,6 +24,7 @@
       html2canvas: {scale:2},
       jsPDF: {unit:'in',format:'letter',}
     };
+    html2pdf().set(opt).from(ticket).save();
     html2pdf(ticket,opt);
   }
 </script>
@@ -79,7 +80,7 @@
   </div>
           
      <br><br>  
-    <div class="container" id="ticket1">       
+    <div class="container" >       
       <br>           
       <div class="ticket p-2 bg-white" >
           
@@ -87,7 +88,7 @@
               <p class="text-center"> <small> <b>Utilisation du code est necessaire pour modification ou annulation du rdv</b> </small></p>
           </div>
           <hr>
-          <div class="infos">
+          <div class="infos" id="ticket1">
             <h5>Détail du patient</h5>
             <?php
               include("main.php");
