@@ -111,11 +111,16 @@
           url: "delete_reservation.php",
           data: formData,
           success: function(result) {
-            $("#msg").html(result);
+             $("#msg").html(result);
 
-            if (result==="Reservation annulé") {
-              location.reload();
+            if (result === "<b>Reservation annulé</b>") {
+              setTimeout(
+                  function() 
+                  {
+                     location.reload();
+                  }, 3000);    
             }
+           
           }
       });
        event.preventDefault();
@@ -146,10 +151,18 @@
           type: "POST",
           url: "reservation.php",
           data: formData, 
-          success : function() {
-            console.log(specialcode);
-            window.location.replace("apres_reservation.php?specialcode="+specialcode.value,true);
-            }                  
+          success : function(result) {
+            $("#msg0").html(result);
+            if (result === "<b>success</b>") {
+              setTimeout(
+                  function() 
+                  {
+                    location.replace("apres_reservation.php?specialcode="+specialcode.value,true);
+                  },1000);    
+            }
+          
+            
+          }                  
       });
       /*var formData1 = {
       specialcode: $("#specialcode").val(),
@@ -192,13 +205,14 @@
 
   //navbar links
   $(document).ready(function() {
-  $(window).scroll(function() {
-    if ($(document).scrollTop() > 50) {
-      $("#nav").addClass("navonscroll");
-    } else {
-      $("#nav").removeClass("navonscroll");
-    }
-    });
+    $(window).scroll(function() {
+      if ($(document).scrollTop() > 50) {
+        $("#nav").addClass("navonscroll");
+      } 
+      else {
+        $("#nav").removeClass("navonscroll");
+      }
+      });
   });
 
    //open popup
@@ -240,9 +254,16 @@
   // code du spinner aprés confirmation du rdv
   function spinneron() {
   document.getElementById("spinner").style.display = "block"; // call the div spinner with id
-  document.getElementById("reservation_form").style.filter ='blur(8px)' ; // change the blur in style 
-  document.getElementById("upper-popup").style.filter ='blur(8px)' ;
+  
+  setTimeout(
+    function spinneroff() {
+    document.getElementById("spinner").style.display = "none"; // call the div spinner with id
+  
+    }, 3000);
+  
 }
+
+
 
 //
 /*function showUser(specialcode1,name1,email1) {
@@ -344,7 +365,9 @@ include("main.php");
               </div>
             </div> 
           </div>
-                
+          <div id="msg0" class="msg p-1">
+           Inserer vos donneés
+          </div>  
           
           <form  id="reservation_form" class="reservation-form" method="post">
             <div class="input-group mb-1">
@@ -418,7 +441,7 @@ include("main.php");
               <label for="comment">Comments</label>
             </div> 
             <div class="d-grid">
-              <input type="submit"  onclick="spinneron('')" value="Confirmer" class="btn btn-block btn-primary p-2">
+              <input type="submit"  onclick="spinneron('')"  value="Confirmer" class="btn btn-block btn-primary p-2">
               
             </div>
             
