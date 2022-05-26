@@ -1,0 +1,79 @@
+.navonscroll {
+    opacity:0.8;
+   }
+   .centring {margin: auto; display: flex;justify-content: center; align-items: center;}
+   .introduction h1{ font-family: 'Lobster', cursive; font-size:50px;
+   }
+   .introduction h5{ font-family: 'Bebas Neue', cursive;
+   }
+   .introduction p{ font-family: 'Bebas Neue', cursive;
+   }
+   .introduction button { font-family: 'Bebas Neue', cursive;
+   }
+   /* yacine */
+   .services {background-color: #0d6efd;}
+   .services h2 {color: white;}
+   .services .card:hover {background-color: #0d6efd; color: white;border: none;}
+   .departements {background-color: white;}
+   .departements .card:hover {background-color:#0d6efd;color: white;border: none;}
+   /* dalil */
+   .medecins .card {border: none;}
+   .dr-infos {text-align: center;}
+   /*lydia*/
+   .a-propos p {font-family: 'Bebas Neue', cursive; line-height: 2;}
+   .a-p-description {border : solid 2px white;background-color:white;color:#0d6efd;padding-bottom:55px}
+   
+   /*amina*/
+   .popup-hide { position: fixed;
+   filter: drop-shadow(0 0 500px rgb(0, 0, 0));
+   padding: 10px;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   transition: 150ms ease-in-out;
+   border: solid 1px #ededed;
+   border-radius: 0px;
+   z-index: 10;
+   background-color: white;
+   width: 800px;
+   max-width: 80%;
+   /*display: none;*/
+   overflow-y: auto;
+   overflow-x: hidden;
+   }
+   /*.popup-hide1 { position: fixed;
+   filter: drop-shadow(0 0 500px rgb(0, 0, 0));
+   padding: 10px;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   transition: 150ms ease-in-out;
+   border: solid 1px #ededed;
+   border-radius: 0px;
+   z-index: 10;
+   background-color: white;
+   width: 800px;
+   max-width: 80%;
+   /*display: none;
+   overflow-y: auto;
+   overflow-x: hidden;
+   }*/
+   .reservation-form {
+   }
+   .reservation-form input {border-radius: 0px;}
+   .reservation-form select {border-radius: 0px;}
+   .reservation-form button {border-radius: 0px;}
+   .spinner {
+     position: fixed; /* Sit on top of the page content */
+     display: none; /* Hidden by default */
+     width: 20%; /* Full width (cover the whole page) */
+     height: 20%; /* Full height (cover the whole page) */
+     top:200px;
+     left: 300px;
+     right: 0;
+     bottom: 0;
+    
+     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+     /*cursor: pointer; /* Add a pointer on hover */
+   }
+   .msg {text-align:center}

@@ -12,86 +12,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
     crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" >
 </head>
 <style>
-    .navonscroll {
-     opacity:0.8;
-    }
-    .centring {margin: auto; display: flex;justify-content: center; align-items: center;}
-    .introduction h1{ font-family: 'Lobster', cursive; font-size:50px;
-    }
-    .introduction h5{ font-family: 'Bebas Neue', cursive;
-    }
-    .introduction p{ font-family: 'Bebas Neue', cursive;
-    }
-    .introduction button { font-family: 'Bebas Neue', cursive;
-    }
-    /* yacine */
-    .services {background-color: #0d6efd;}
-    .services h2 {color: white;}
-    .services .card:hover {background-color: #0d6efd; color: white;border: none;}
-    .departements {background-color: white;}
-    .departements .card:hover {background-color:#0d6efd;color: white;border: none;}
-    /* dalil */
-    .medecins .card {border: none;}
-    .dr-infos {text-align: center;}
-    .a-propos p {font-family: 'Bebas Neue', cursive; line-height: 2;}
-    .a-p-description {border : solid 2px white;background-color:white;color:#0d6efd;padding-bottom:55px}
-    footer{}
-
-    .popup-hide { position: fixed;
-    filter: drop-shadow(0 0 500px rgb(0, 0, 0));
-    padding: 10px;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 150ms ease-in-out;
-    border: solid 1px #ededed;
-    border-radius: 0px;
-    z-index: 10;
-    background-color: white;
-    width: 800px;
-    max-width: 80%;
-    /*display: none;*/
-    overflow-y: auto;
-    overflow-x: hidden;
-    }
-    .popup-hide1 { position: fixed;
-    filter: drop-shadow(0 0 500px rgb(0, 0, 0));
-    padding: 10px;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 150ms ease-in-out;
-    border: solid 1px #ededed;
-    border-radius: 0px;
-    z-index: 10;
-    background-color: white;
-    width: 800px;
-    max-width: 80%;
-    /*display: none;*/
-    overflow-y: auto;
-    overflow-x: hidden;
-    }
-    .reservation-form {
-    }
-    .reservation-form input {border-radius: 0px;}
-    .reservation-form select {border-radius: 0px;}
-    .reservation-form button {border-radius: 0px;}
-    .spinner {
-      position: fixed; /* Sit on top of the page content */
-      display: none; /* Hidden by default */
-      width: 20%; /* Full width (cover the whole page) */
-      height: 20%; /* Full height (cover the whole page) */
-      top:200px;
-      left: 300px;
-      right: 0;
-      bottom: 0;
-     
-      z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-      cursor: pointer; /* Add a pointer on hover */
-    }
-    .msg {text-align:center}
+   
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -617,7 +541,7 @@ include("main.php");
                     </div>
                 </div>
                 <div class="card col-sm-3 rounded-0 m-2">
-                    <div class="card-body"><img src="4.png" class="img-fluid" alt=""></div>
+                    <div class="card-body"><img src="5.png" class="img-fluid" alt=""></div>
                     <div class="dr-infos">
                       <p>Dr. BLACK Walter</p>
                       <p>Ophthalmologist</p>
@@ -637,12 +561,12 @@ include("main.php");
         </div>
         <br>
         <!-- partie a propos -->
-        <div class="a-propos bg-primary p-5" id="section4">
+        <div class="a-propos bg-primary p-5" id="section4">  <!--divisin a propos -->
           <br>
-          <h2 class="text-white text-center">A propos</h2>
+          <h2 class="text-white text-center">A propos</h2> <!--titre a propos -->
           <br>
-            <div class="row">
-              <div class="col-sm-6">
+            <div class="row"> <!--la ligne -->
+              <div class="col-sm-6"> <!--1er colone  -->
                 <div class="a-p-description">
                   <h4 class="m-2">E-MED</h4>
                   <br>
@@ -652,30 +576,30 @@ include("main.php");
                 </div>
                 
               </div>
-              <div class="col-sm-6">
-              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img style="width:500px;height:400px" class="img-fluid float-end d-block w-100" src="6.jpg" alt="">
+              <div class="col-sm-6">  <!--la 2eme ligne -->
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                      <img style="width:500px;height:400px" class="img-fluid float-end d-block w-100" src="6.jpg" alt=""> <!--tla taille de l'image-->
+                      </div>
+                      <div class="carousel-item">
+                      <img style="width:500px;height:400px" class="img-fluid float-end d-block w-100" src="7.png" alt="">
+                      </div>
+                      <div class="carousel-item">
+                      <img style="width:500px;height:400px" class="img-fluid float-end d-block w-100" src="6.jpg" alt="">
+                      </div>
                     </div>
-                    <div class="carousel-item">
-                    <img style="width:500px;height:400px" class="img-fluid float-end d-block w-100" src="7.png" alt="">
-                    </div>
-                    <div class="carousel-item">
-                    <img style="width:500px;height:400px" class="img-fluid float-end d-block w-100" src="6.jpg" alt="">
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"> <!--bp gauche -->
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"> <!--bp droite  -->
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span> 
+                      <span class="visually-hidden">Next</span>
+                    </button>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
+                    
                 </div>
-                  
-              </div>
             </div>
         </div>       
     </div>
@@ -716,7 +640,7 @@ include("main.php");
         </div>
         <div class="col-sm-4">
           <h5>Links</h5>
-          <a class="btn btn-link" href="#">A propos</a>
+          <a class="btn btn-link" href="#section4">A propos</a>
           <br>
           <a class="btn btn-link" href="#">Notre Blog</a>
           <br>
